@@ -1,0 +1,10 @@
+// fs - font size
+// lh - line height
+// fw - font weight
+// EXAMPLE USE -  @include font-size(18px, 23px|150%, 500);
+
+@mixin font-size($fs, $lh: 110%, $fw: 400) {
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+}

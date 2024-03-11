@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'utils/mixin-font-size';
+@import 'utils/mixin-media';
+
+@import 'variables';
+@import 'fonts';
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  min-height: 100vh;
+
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+
+  color: var(--text-black-color);
+  background-color: var(--bg-white-color);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 2vh;
+  overflow-x: auto;
+
+  // &::-webkit-scrollbar {
+  //   background-color: var(--d);
+  // }
+  // &::-webkit-scrollbar-thumb {
+  //   background: var(--d);
+  // }
+}
