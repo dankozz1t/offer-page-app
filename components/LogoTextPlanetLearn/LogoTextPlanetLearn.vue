@@ -7,6 +7,8 @@
 
 <style scoped lang="scss">
 .text {
+  display: inline;
+
   @include font-size(24px, 100%, 700);
 
   color: var(--black-color);

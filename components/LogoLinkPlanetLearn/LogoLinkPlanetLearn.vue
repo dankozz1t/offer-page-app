@@ -11,6 +11,4 @@ import LogoTextPlanetLearn from '~/components/LogoTextPlanetLearn/LogoTextPlanet
   </NuxtLink>
 </template>
 
-<style scoped lang="scss">
-//..
-</style>
+<style scoped lang="scss"></style>

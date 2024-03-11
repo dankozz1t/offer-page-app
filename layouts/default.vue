@@ -1,6 +1,10 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import Header from '~/components/Header/Header.vue';
+</script>
 
 <template>
+  <Header />
+
   <main class="main h-screen">
     <NuxtPage />
   </main>
