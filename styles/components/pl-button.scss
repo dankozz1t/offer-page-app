@@ -1,0 +1,28 @@
+.pl-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 0;
+
+  width: 100%;
+  max-width: 300px;
+  color: var(--white-color);
+
+  @include font-size(16px, 120%, 700);
+
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-time) var(--transition-cubic),
+    border-color var(--transition-time) var(--transition-cubic),
+    color var(--transition-time) var(--transition-cubic);
+
+  &:disabled {
+    background-color: var(--fourth-accent-color);
+    pointer-events: none;
+    user-select: none;
+  }
+}

@@ -8,8 +8,6 @@
 
 <style scoped lang="scss">
 .main {
-  // background-image: url('@/assets/bg_planets.jpg');
-
   &::before {
     content: '';
     position: absolute;
