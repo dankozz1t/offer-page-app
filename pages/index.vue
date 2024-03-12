@@ -1,6 +1,6 @@
 <script setup lang="ts">
 await navigateTo({
-  path: '/offer-page',
+  path: '/',
   query: {
     abtest: 'test',
   },
