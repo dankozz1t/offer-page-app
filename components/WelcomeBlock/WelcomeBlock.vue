@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import LogoTextPlanetLearn from '~/components/LogoTextPlanetLearn/LogoTextPlanetLearn.vue';
+import LogoText from '~/components/LogoText/LogoText.vue';
 </script>
 
 <template>
   <section class="welcome">
     <h1 class="welcome__title">Start your learning journey now</h1>
     <h2 class="welcome__subtitle">
-      Get a <LogoTextPlanetLearn /> plan to rock <span class="block"> self-learning </span>
+      Get a <LogoText /> plan to rock <span class="block"> self-learning </span>
     </h2>
 
     <Button> Get my plan </Button>

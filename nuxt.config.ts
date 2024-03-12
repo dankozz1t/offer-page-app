@@ -7,9 +7,8 @@ export default defineNuxtConfig({
       {
         autoImports: ['defineStore', 'acceptHMRUpdate'],
       },
-
     ],
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
   ],
 
   css: ['@/styles/common.scss'],
@@ -28,22 +27,17 @@ export default defineNuxtConfig({
     storesDirs: ['./stores/**'],
   },
 
-
-
-
-
   app: {
     head: {
       htmlAttrs: {
-        lang: 'ua',
+        lang: 'eng',
       },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1.0',
-      title: 'PlanetLearn',
       meta: [
         {
           name: 'description',
-          content: 'PlanetLearn - description',
+          content: 'site description',
         },
         {
           name: 'robots',
@@ -52,4 +46,4 @@ export default defineNuxtConfig({
       ],
     },
   },
-})
+});

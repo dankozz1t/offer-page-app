@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import IconLock from '~/components/icons/IconLock.vue';
+import IconStar from '~/components/icons/IconStar.vue';
+import { useCompanyStore } from '@/stores/company';
+const companyStore = useCompanyStore();
 </script>
 
 <template>
-  <div class="trial">
+  <div :class="['trial', companyStore.getClass.trial]">
     <div class="flex justify-between items-center mb-9">
       <div>
         <h3 class="trial__title">3-day trial for <span class="trial__text--accent">$0.99</span></h3>
@@ -15,14 +18,25 @@ import IconLock from '~/components/icons/IconLock.vue';
 
     <ul class="trial__list">
       <li class="trial__item">
-        Exclusive access to <span class="trial__text--accent">350+</span> learning programs
+        <IconStar />
+        <p>Exclusive access to <span class="trial__text--accent">350+</span> learning programs</p>
       </li>
-      <li class="trial__item">Personalized course plan</li>
-      <li class="trial__item">Comfy learning schedule made by you</li>
       <li class="trial__item">
-        <span class="trial__text--accent">24/7</span> tutor support in a secure chat
+        <IconStar />
+        <p>Personalized course plan</p>
       </li>
-      <li class="trial__item">Lifetime access to materials</li>
+      <li class="trial__item">
+        <IconStar />
+        <p>Comfy learning schedule made by you</p>
+      </li>
+      <li class="trial__item">
+        <IconStar />
+        <p><span class="trial__text--accent"> 24/7</span> tutor support in a secure chat</p>
+      </li>
+      <li class="trial__item">
+        <IconStar />
+        <p>Lifetime access to materials</p>
+      </li>
     </ul>
 
     <p class="trial__info">
@@ -55,7 +69,7 @@ $trial-info-border-color: rgba(0, 0, 0, 0.2);
   background-color: var(--white-color);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
 
-  &::before {
+  &--planetlearn::before {
     content: '';
     position: absolute;
     width: 200px;
@@ -92,15 +106,6 @@ $trial-info-border-color: rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   gap: 10px;
-
-  &::before {
-    content: '';
-    display: flex;
-    width: 24px;
-    height: 24px;
-
-    background-image: url('@/assets/star.svg');
-  }
 
   &:not(:last-child) {
     margin-bottom: 18px;

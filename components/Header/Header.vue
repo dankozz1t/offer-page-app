@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import LogoLinkPlanetLearn from '~/components/LogoLinkPlanetLearn/LogoLinkPlanetLearn.vue';
+import LogoLink from '~/components/LogoLink/LogoLink.vue';
 </script>
 
 <template>
   <header class="py-5">
     <div class="container mx-auto">
-      <LogoLinkPlanetLearn />
+      <LogoLink />
     </div>
   </header>
 </template>
