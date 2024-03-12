@@ -4,8 +4,14 @@ import IconLock from '~/components/icons/IconLock.vue';
 
 <template>
   <div class="trial">
-    <h3 class="trial__title">3-day trial for <span class="trial__text--accent">$0.99</span></h3>
-    <p class="trial__subtitle">Then $39.99/week</p>
+    <div class="flex justify-between items-center mb-9">
+      <div>
+        <h3 class="trial__title">3-day trial for <span class="trial__text--accent">$0.99</span></h3>
+        <p class="trial__subtitle">Then $9.99</p>
+      </div>
+
+      <Timer />
+    </div>
 
     <ul class="trial__list">
       <li class="trial__item">
@@ -38,6 +44,8 @@ $trial-border-color: #cdcdcd;
 $trial-info-border-color: rgba(0, 0, 0, 0.2);
 
 .trial {
+  position: relative;
+
   width: 100%;
   max-width: 476px;
   padding: 24px;
@@ -46,17 +54,26 @@ $trial-info-border-color: rgba(0, 0, 0, 0.2);
   border: 1px solid $trial-border-color;
   background-color: var(--white-color);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    right: 24px;
+    top: -56px;
+    background-image: url('@/assets/asteroid.svg');
+  }
 }
 
 .trial__title {
+  text-wrap: nowrap;
   margin-bottom: 8px;
 
   @include font-size(24px, 120%, 800);
 }
 
 .trial__subtitle {
-  margin-bottom: 36px;
-
   @include font-size(20px, 120%, 600);
 }
 

@@ -4,7 +4,7 @@ import DayTrialBlock from '~/components/DayTrialBlock/DayTrialBlock.vue';
 </script>
 
 <template>
-  <div class="page-container flex justify-between container mx-auto mt-24">
+  <div class="page-container flex justify-center container mx-auto mt-24 gap-16">
     <WelcomeBlock />
 
     <DayTrialBlock />
