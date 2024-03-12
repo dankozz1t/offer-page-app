@@ -5,18 +5,14 @@ const company: IConfigWLP = {
   companyName: ['Smart', 'Study'],
 
   colors: {
-    '--black-color': '#FFFFFF',
-    '--white-color': '##495EEE',
+    '--black-color': '#000000',
+    '--white-color': '#FFFFFF',
     '--gray-color': '#e1e1e1',
-    '--first-accent-color': '#66EDFF',
+    '--first-accent-color': '#4EAAFF',
     '--second-accent-color': '#FEC538',
     '--second-accent-hover-color': '#ffda80',
-    '--third-accent-color': '#4EAAFF',
+    '--third-accent-color': '#66EDFF',
     '--fourth-accent-color': '#617398',
-  },
-
-  classes: {
-    background: 'background--smartstudy',
   },
 
   components: {

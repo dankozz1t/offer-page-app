@@ -6,8 +6,8 @@ const companyStore = useCompanyStore();
 
 <template>
   <p class="text">
-    <span class="text--accent">{{ companyStore.getCompanyName[0] }}</span>
-    <span>{{ companyStore.getCompanyName[1] }}</span>
+    <span class="text--accent">{{ companyStore.getCompany.companyName[0] }}</span>
+    <span>{{ companyStore.getCompany.companyName[1] }}</span>
   </p>
 </template>
 
@@ -17,10 +17,16 @@ const companyStore = useCompanyStore();
 
   @include font-size(24px, 100%, 700);
 
-  color: var(--black-color);
-
   &--accent {
     color: var(--first-accent-color);
+  }
+
+  .planetlearn & {
+    color: var(--black-color);
+  }
+
+  .smartstudy & {
+    color: var(--white-color);
   }
 }
 </style>

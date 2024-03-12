@@ -15,11 +15,6 @@ const company: IConfigWLP = {
     '--fourth-accent-color': '#d2d2d2',
   },
 
-  classes: {
-    trial: 'trial--planetlearn',
-    background: 'background--planetlearn',
-  },
-
   components: {
     iconLogo: 'IconPlanet',
   },

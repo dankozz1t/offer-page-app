@@ -13,11 +13,6 @@ export default interface IConfigWLP {
     '--fourth-accent-color': string;
   };
 
-  classes: {
-    trial?: string;
-    background: string;
-  };
-
   components: {
     iconLogo: string;
   };

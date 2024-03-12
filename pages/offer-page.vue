@@ -7,7 +7,7 @@ const companyStore = useCompanyStore();
 </script>
 
 <template>
-  <div :class="['background h-screen', companyStore.getClass.background]">
+  <div :class="['background h-screen', companyStore.getCompany.slug]">
     <Header />
 
     <main>
@@ -25,25 +25,23 @@ const companyStore = useCompanyStore();
   padding: 0 100px;
 }
 
-.background {
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  }
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
 
-  &--planetlearn::before {
-    background-image: url('@/assets/bg_planetlearn.jpg');
-    opacity: 0.1;
-  }
+.planetlearn.background::before {
+  background-image: url('@/assets/bg_planetlearn.jpg');
+  opacity: 0.1;
+}
 
-  &--smartstudy::before {
-    background-image: url('@/assets/bg_smartstudy.jpg');
-    background-size: cover;
-  }
+.smartstudy.background::before {
+  background-image: url('@/assets/bg_smartstudy.jpg');
+  background-size: cover;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <button :class="['pl-button', buttonClasses]">
+  <button :class="['i-button', buttonClasses]">
     <slot></slot>
   </button>
 </template>
@@ -24,13 +24,25 @@ const buttonClasses = computed(() => {
 </script>
 
 <style scoped lang="scss">
-@import '~/styles/components/pl-button';
+@import '~/styles/components/i-button';
 
 .button--primary {
-  background-color: var(--black-color);
+  .planetlearn & {
+    background-color: var(--black-color);
 
-  &:hover {
-    background-color: var(--third-accent-color);
+    &:hover {
+      background-color: var(--third-accent-color);
+    }
+  }
+
+  .smartstudy & {
+    color: #495eee;
+    background-color: var(--white-color);
+
+    &:hover {
+      color: var(--white-color);
+      background-color: #6c89ff;
+    }
   }
 }
 

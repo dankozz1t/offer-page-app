@@ -4,7 +4,10 @@ import LogoText from '~/components/LogoText/LogoText.vue';
 
 <template>
   <section class="welcome">
-    <h1 class="welcome__title">Start your learning journey now</h1>
+    <h1 class="welcome__title">
+      <span class="welcome__title--accent">Start</span> your learning journey
+      <span class="welcome__title--accent">now</span>
+    </h1>
     <h2 class="welcome__subtitle">
       Get a <LogoText /> plan to rock <span class="block"> self-learning </span>
     </h2>
@@ -16,12 +19,24 @@ import LogoText from '~/components/LogoText/LogoText.vue';
 <style scoped lang="scss">
 .welcome {
   max-width: 500px;
+
+  .planetlearn & {
+    color: var(--black-color);
+  }
+
+  .smartstudy & {
+    color: var(--white-color);
+  }
 }
 
 .welcome__title {
   margin-bottom: 24px;
 
   @include font-size(48px, 120%, 800);
+
+  .smartstudy &--accent {
+    color: var(--first-accent-color);
+  }
 }
 
 .welcome__subtitle {

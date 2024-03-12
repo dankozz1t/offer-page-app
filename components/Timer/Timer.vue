@@ -49,7 +49,6 @@ onUnmounted(() => {
 </script>
 
 <style lang="scss" scoped>
-$progress-color: #00ca14;
 $bg-color: var(--black-color);
 $text-color: var(--white-color);
 $border-color: #ff0000cc;
@@ -80,9 +79,16 @@ $border-color: #ff0000cc;
 
   overflow: hidden;
   border-radius: 12px;
-  background-color: $progress-color;
 
   transition: width 1.5s linear;
+
+  .planetlearn & {
+    background-color: #00ca14;
+  }
+
+  .smartstudy & {
+    background-color: #4eaaff;
+  }
 }
 
 .timer__text {

@@ -10,9 +10,8 @@ export const useCompanyStore = defineStore('company', {
   }),
 
   getters: {
-    getClass: (state) => state.currentCompany.classes,
+    getCompany: (state) => state.currentCompany,
     getComponent: (state) => state.currentCompany.components,
-    getCompanyName: (state) => state.currentCompany.companyName,
   },
 
   actions: {
