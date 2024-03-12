@@ -76,7 +76,7 @@ $trial-info-border-color: rgba(0, 0, 0, 0.2);
     height: 80px;
     right: 24px;
     top: -56px;
-    background-image: url('@/assets/asteroid.svg');
+    background-image: url('~/assets/asteroid.svg');
   }
 }
 
