@@ -18,7 +18,7 @@ const isTimerExpired = ref(localStorage.getItem('timeLeft') == 0);
     <Timer
       v-if="!isTimerExpired"
       local-key="timeLeft"
-      :total-time-seconds="0.5 * 60"
+      :total-time-seconds="3 * 60"
       :critical-time="10"
       @timer-expired="(v) => (isTimerExpired = v)"
     />
