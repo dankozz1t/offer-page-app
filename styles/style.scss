@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import 'utils/mixin-font-size';
 @import 'utils/mixin-media';
 
@@ -26,11 +22,4 @@ html {
   scroll-behavior: smooth;
   font-size: 2vh;
   overflow-x: auto;
-
-  // &::-webkit-scrollbar {
-  //   background-color: var(--d);
-  // }
-  // &::-webkit-scrollbar-thumb {
-  //   background: var(--d);
-  // }
 }

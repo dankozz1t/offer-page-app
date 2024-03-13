@@ -78,6 +78,8 @@ const onSubmitForm = () => {
         label="Card Number"
         placeholder="•••• •••• •••• ••••"
         maska="#### #### #### ####"
+        autocomplete="cc-number"
+        name="credit-number"
       />
 
       <div class="payment-modal__wrapper mb-10">
@@ -88,6 +90,7 @@ const onSubmitForm = () => {
           class="payment-modal__select"
           label="Month"
           placeholder="Select"
+          autocomplete="cc-exp-month"
           @update:selected="selectedMonth = $event"
         />
 
@@ -98,6 +101,7 @@ const onSubmitForm = () => {
           class="payment-modal__select"
           label="Year"
           placeholder="Select"
+          autocomplete="cc-exp-year"
           @update:selected="selectedYear = $event"
         />
 
@@ -107,6 +111,8 @@ const onSubmitForm = () => {
           label="CVC"
           placeholder="•••"
           maska="###"
+          type="password"
+          autocomplete="cc-csc"
         />
       </div>
     </div>
