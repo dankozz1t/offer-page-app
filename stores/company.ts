@@ -20,6 +20,13 @@ export const useCompanyStore = defineStore('company', {
 
       const abTest = router.currentRoute.value.query.abtest;
 
+      if (router.currentRoute.value.name === 'offer-page') {
+        this.companySlug = localStorage.getItem('companySlug') || '';
+        if (this.companySlug) {
+          return await this.loadCompany();
+        }
+      }
+
       switch (abTest) {
         case 'var1':
           await this.setCompanySlugAndLoad('planetlearn');
@@ -31,13 +38,9 @@ export const useCompanyStore = defineStore('company', {
           router.push({ path: '/offer-page' });
           break;
 
-        case 'offer-page':
-          this.companySlug = localStorage.getItem('companySlug') || '';
-          await this.loadCompany();
-          break;
-
         default:
           await this.setCompanySlugAndLoad(companies[Math.floor(Math.random() * companies.length)]);
+          localStorage.removeItem('timeLeft');
           router.push({ path: '/offer-page' });
           break;
       }

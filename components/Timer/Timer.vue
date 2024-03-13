@@ -7,15 +7,20 @@
   </div>
 </template>
 
-<script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+<script setup lang="ts">
+import { ref, computed, defineEmits, onMounted, onUnmounted } from 'vue';
 
-const totalTime = 3 * 60;
-const criticalTime = 10;
+const props = defineProps<{
+  localKey: string;
+  totalTimeSeconds: number;
+  criticalTime: number;
+}>();
 
-const timeLeft = ref(totalTime);
+const emit = defineEmits(['timer-expired']);
 
-const isCritical = computed(() => timeLeft.value <= criticalTime && timeLeft.value != 0);
+const timeLeft = ref(Number(localStorage.getItem(props.localKey)) || props.totalTimeSeconds);
+
+const isCritical = computed(() => timeLeft.value <= props.criticalTime && timeLeft.value != 0);
 
 const formattedTime = computed(() => {
   const minutes = Math.floor(timeLeft.value / 60)
@@ -27,20 +32,24 @@ const formattedTime = computed(() => {
 });
 
 const progressBarStyle = computed(() => ({
-  width: `${(timeLeft.value / totalTime) * 100}%`,
+  width: `${(timeLeft.value / props.totalTimeSeconds) * 100}%`,
 }));
 
 const updateTimer = () => {
   if (timeLeft.value > 0) {
-    return timeLeft.value--;
+    timeLeft.value--;
+    localStorage.setItem(props.localKey, String(timeLeft.value));
+
+    return;
   }
 
+  emit('timer-expired', true);
   clearInterval(timerInterval);
 };
 
-let timerInterval;
+let timerInterval: number | undefined;
 onMounted(() => {
-  timerInterval = setInterval(updateTimer, 1000);
+  timerInterval = Number(setInterval(updateTimer, 1000));
 });
 
 onUnmounted(() => {

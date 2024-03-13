@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import IconLock from '~/components/icons/IconLock.vue';
 import IconStar from '~/components/icons/IconStar.vue';
+
+const isTimerExpired = ref(Number(localStorage.getItem('timeLeft')) == 0);
 </script>
 
 <template>
@@ -11,11 +13,22 @@ import IconStar from '~/components/icons/IconStar.vue';
           <h3 class="trial__title">
             3-day trial for <span class="trial__text--accent">$0.99</span>
           </h3>
-          <p class="trial__subtitle">Then $9.99</p>
-          <p class="trial__week">$39.99/week</p>
+          <template v-if="!isTimerExpired">
+            <p class="trial__subtitle">Then $9.99</p>
+            <p class="trial__week">$39.99/week</p>
+          </template>
+          <template v-else>
+            <p class="trial__subtitle">Then $39.99/week</p>
+          </template>
         </div>
 
-        <Timer />
+        <Timer
+          v-if="!isTimerExpired"
+          local-key="timeLeft"
+          :total-time-seconds="0.5 * 60"
+          :critical-time="10"
+          @timer-expired="(v) => (isTimerExpired = v)"
+        />
       </div>
 
       <ul class="trial__list">
