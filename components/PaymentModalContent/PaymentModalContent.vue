@@ -147,6 +147,10 @@ const onSubmitForm = () => {
   .smartstudy & {
     color: var(--white-color);
   }
+
+  @include media(not-desktop) {
+    min-width: 0;
+  }
 }
 
 .payment-modal__title {

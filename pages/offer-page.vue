@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Header from '~/components/Header/Header.vue';
-import WelcomeBlock from '~/components/WelcomeBlock/WelcomeBlock.vue';
-import DayTrialBlock from '~/components/DayTrialBlock/DayTrialBlock.vue';
+import GetPlanBlock from '~/components/GetPlanBlock/GetPlanBlock.vue';
+import MainInfoBlock from '~/components/MainInfoBlock/MainInfoBlock.vue';
 import { useCompanyStore } from '@/stores/company';
 const companyStore = useCompanyStore();
 document.body.classList.add(companyStore.getCompany.slug);
@@ -13,9 +13,9 @@ document.body.classList.add(companyStore.getCompany.slug);
 
     <main>
       <div class="page-container flex justify-center container mx-auto mt-24 gap-16">
-        <WelcomeBlock />
+        <GetPlanBlock />
 
-        <DayTrialBlock />
+        <MainInfoBlock />
       </div>
     </main>
   </div>
