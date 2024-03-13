@@ -2,7 +2,7 @@
 import IconLock from '~/components/icons/IconLock.vue';
 import IconStar from '~/components/icons/IconStar.vue';
 
-const isTimerExpired = ref(Number(localStorage.getItem('timeLeft')) == 0);
+const isTimerExpired = ref(localStorage.getItem('timeLeft') == 0);
 </script>
 
 <template>

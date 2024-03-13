@@ -53,6 +53,8 @@ const buttonClasses = computed(() => {
 
   &:hover {
     color: var(--white-color);
+    border-color: var(--black-color);
+
     background-color: var(--black-color);
   }
 }

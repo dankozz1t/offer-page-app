@@ -4,10 +4,11 @@ import WelcomeBlock from '~/components/WelcomeBlock/WelcomeBlock.vue';
 import DayTrialBlock from '~/components/DayTrialBlock/DayTrialBlock.vue';
 import { useCompanyStore } from '@/stores/company';
 const companyStore = useCompanyStore();
+document.body.classList.add(companyStore.getCompany.slug);
 </script>
 
 <template>
-  <div :class="['background h-screen', companyStore.getCompany.slug]">
+  <div class="background h-screen">
     <Header />
 
     <main>
@@ -33,15 +34,15 @@ const companyStore = useCompanyStore();
   right: 0;
   bottom: 0;
   z-index: -1;
-}
 
-.planetlearn.background::before {
-  background-image: url('@/assets/bg_planetlearn.jpg');
-  opacity: 0.1;
-}
+  .planetlearn & {
+    background-image: url('@/assets/bg_planetlearn.jpg');
+    opacity: 0.1;
+  }
 
-.smartstudy.background::before {
-  background-image: url('@/assets/bg_smartstudy.jpg');
-  background-size: cover;
+  .smartstudy & {
+    background-image: url('@/assets/bg_smartstudy.jpg');
+    background-size: cover;
+  }
 }
 </style>

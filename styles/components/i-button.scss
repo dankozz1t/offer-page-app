@@ -21,8 +21,10 @@
     color var(--transition-time) var(--transition-cubic);
 
   &:disabled {
-    background-color: var(--fourth-accent-color);
+    color: var(--white-color) !important;
+    background-color: var(--fourth-accent-color) !important;
     pointer-events: none;
     user-select: none;
+    opacity: 0.8;
   }
 }

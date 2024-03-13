@@ -1,5 +1,19 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import LogoText from '~/components/LogoText/LogoText.vue';
+import Modal from '~/components/Modal/Modal.vue';
+import Button from '~/components/Button/Button.vue';
+import PaymentModalContent from '~/components/PaymentModalContent/PaymentModalContent.vue';
+
+const isVisibleModal = ref(false);
+
+const onShowModal = () => {
+  isVisibleModal.value = true;
+};
+
+const onCloseModal = () => {
+  isVisibleModal.value = false;
+};
 </script>
 
 <template>
@@ -12,7 +26,11 @@ import LogoText from '~/components/LogoText/LogoText.vue';
       Get a <LogoText /> plan to rock <span class="block"> self-learning </span>
     </h2>
 
-    <Button> Get my plan </Button>
+    <Button @click="onShowModal"> Get my plan </Button>
+
+    <Modal :is-visible="isVisibleModal" :on-close="onCloseModal">
+      <PaymentModalContent :on-close="onCloseModal" />
+    </Modal>
   </section>
 </template>
 
