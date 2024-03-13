@@ -1,0 +1,91 @@
+.i-input {
+  height: 46px;
+}
+
+.i-input__label {
+  position: relative;
+  z-index: 6;
+
+  display: block;
+  max-width: fit-content;
+  margin-bottom: -5px;
+  margin-left: 11px;
+
+  padding: 0 5px;
+  border-radius: 30px;
+
+  @include font-size(12px, 100%, 700);
+
+  .planetlearn & {
+    background-color: var(--white-color);
+  }
+
+  .smartstudy & {
+    background-color: #617398;
+  }
+}
+
+.i-input__field {
+  padding: 14px 16px;
+  outline: none;
+
+  width: 100%;
+  border: 1px solid var(--gray-color);
+  border-radius: 8px;
+
+  @include font-size(12px, 100%, 400);
+
+  &::placeholder {
+    @include font-size(20px, 100%, 400);
+  }
+
+  .planetlearn & {
+    border: 1px solid var(--gray-color);
+    background-color: var(--white-color);
+
+    &::placeholder {
+      color: #6c727f;
+    }
+
+    &--valid {
+      border-color: #00ca14;
+    }
+
+    &--invalid {
+      border-color: #ff0000;
+    }
+  }
+
+  .smartstudy & {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: #617398;
+
+    &::placeholder {
+      color: var(--white-color);
+    }
+
+    &--valid {
+      border-color: #7899ff;
+    }
+
+    &--invalid {
+      border-color: #ff0000;
+    }
+  }
+}
+
+.i-input__card {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    right: 16px;
+    width: 32px;
+    height: 22px;
+
+    background-image: url('~/assets/mastercard.svg');
+    background-repeat: no-repeat;
+  }
+}

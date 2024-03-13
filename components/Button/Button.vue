@@ -1,16 +1,10 @@
-<template>
-  <button :class="['i-button', buttonClasses]">
-    <slot></slot>
-  </button>
-</template>
-
 <script setup lang="ts">
 import { defineProps, computed } from 'vue';
 
 type ButtonTypes = 'primary' | 'secondary' | 'accent';
 
 const props = defineProps({
-  type: {
+  option: {
     type: String as PropType<ButtonTypes>,
     default: 'primary',
   },
@@ -19,9 +13,15 @@ const props = defineProps({
 });
 
 const buttonClasses = computed(() => {
-  return [`button--${props.type}`];
+  return [`button--${props.option}`];
 });
 </script>
+
+<template>
+  <button :class="['i-button', buttonClasses]" type="button">
+    <slot></slot>
+  </button>
+</template>
 
 <style scoped lang="scss">
 @import '~/styles/components/i-button';
