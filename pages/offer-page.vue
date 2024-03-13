@@ -8,11 +8,11 @@ document.body.classList.add(companyStore.getCompany.slug);
 </script>
 
 <template>
-  <div class="background h-screen">
+  <div class="offer__background h-screen">
     <Header />
 
     <main>
-      <div class="page-container flex justify-center container mx-auto mt-24 gap-16">
+      <div class="offer__container container mx-auto mt-24 gap-16">
         <GetPlanBlock />
 
         <MainInfoBlock />
@@ -22,11 +22,14 @@ document.body.classList.add(companyStore.getCompany.slug);
 </template>
 
 <style scoped lang="scss">
-.page-container {
+.offer__container {
+  display: flex;
+  justify-content: center;
+
   padding: 0 100px;
 }
 
-.background::before {
+.offer__background::before {
   content: '';
   position: absolute;
   top: 0;
