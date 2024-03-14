@@ -59,6 +59,10 @@ document.body.classList.add(companyStore.getCompany.slug);
     overflow: hidden;
     background-image: url('@/assets/bg_smartstudy.jpg');
     background-size: cover;
+
+    @include media(not-desktop) {
+      background-image: url('@/assets/bg_smartstudy@mobile.jpg');
+    }
   }
 }
 </style>
