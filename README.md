@@ -18,15 +18,15 @@ If you refresh the '/offer-page' - the timer will be saved. </br> To refresh the
 
 ## Demonstration gif
 
-## ![Demonstration](https://github.com/dankozz1t/offer-page-app-app/blob/main/public/demonstration.gif)
+## ![Demonstration](https://github.com/dankozz1t/offer-page-app/blob/main/public/demonstration.gif)
 
 ## Demonstration mockup Design 1
 
-## ![Design 1](https://github.com/dankozz1t/offer-page-app-app/blob/main/public/mockup_planetlearn.jpg)
+## ![Design 1](https://github.com/dankozz1t/offer-page-app/blob/main/public/mockup_planetlearn.jpg)
 
 ## Demonstration mockup Design 2
 
-## ![Design 2](https://github.com/dankozz1t/offer-page-app-app/blob/main/public/mockup_smartstudy.jpg)
+## ![Design 2](https://github.com/dankozz1t/offer-page-app/blob/main/public/mockup_smartstudy.jpg)
 
 ## Setup
 
