@@ -1,13 +1,18 @@
-# WLP companies app
+## Offer page for an educational service with AB test logic.
 
-- Look at the <b>offer page RANDOM design</b>
+## I know a lot of my gaps, but[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=I'm+really+trying+to+be+better...)](https://git.io/typing-svg)
+
+- To get to the <b>random design</b> page go to
   [https://wlp-companies.netlify.app/?abtest=test](https://wlp-companies.netlify.app/?abtest=test)
 
-- Look at the <b>offer page design 1</b>
+- To get to the <b>1 design</b> page go to
   [https://wlp-companies.netlify.app/?abtest=var1](https://wlp-companies.netlify.app/?abtest=var1)
 
-- Look at the <b>offer page design 2</b>
+- To get to the <b>2 design</b> page go to
   [https://wlp-companies.netlify.app/?abtest=var2](https://wlp-companies.netlify.app/?abtest=var2)
+
+If you refresh the '/offer-page' - the timer will be saved. </br> To refresh the timer go to
+[https://wlp-companies.netlify.app/](https://wlp-companies.netlify.app/)
 
 ---
 
@@ -18,3 +23,10 @@ npm install
 
 npm run dev
 ```
+
+[![Alex-Taylor Danko](https://img.shields.io/badge/Dev-Alex_Taylor_Danko-purple?style=for-the-badge&logo=Contacts&logoColor=white)](#)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dankozz1/)
+[![GitHub](https://img.shields.io/badge/GitHub-grey?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/dankozz1t)
+[![Telegram](https://img.shields.io/badge/Telegram-blue?style=for-the-badge&logo=Telegram&logoColor=white)](https://t.me/dankozz1)
+[![Email](https://img.shields.io/badge/alexdankoxxl@gmail.com-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white)](mailto:alexdankoxxl@gmail.com)
