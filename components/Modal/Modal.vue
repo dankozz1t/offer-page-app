@@ -44,15 +44,39 @@ defineProps<{
   padding: 24px 16px;
 
   z-index: 11;
+  max-height: 95vh;
+  overflow-y: auto;
 
   .planetlearn & {
     border-radius: 12px;
     background-color: var(--white-color);
+
+    &::-webkit-scrollbar {
+      border-radius: 12px;
+      background-color: #e4e4e4;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 12px;
+      background: var(--fourth-accent-color);
+    }
   }
 
   .smartstudy & {
     border-radius: 24px;
     background-color: #4d5e82;
+
+    &::-webkit-scrollbar {
+      border-radius: 24px;
+      background-color: #909fbd;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 24px;
+      background: #617398;
+    }
+  }
+
+  @include media(not-desktop) {
+    margin: 0 16px;
   }
 }
 

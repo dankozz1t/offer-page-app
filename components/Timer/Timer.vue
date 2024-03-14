@@ -81,6 +81,11 @@ $border-color: #ff0000cc;
     border: 1px solid $border-color;
     box-shadow: 0 0 6px 0 $border-color;
   }
+
+  @include media(not-desktop) {
+    width: 110px;
+    height: 47px;
+  }
 }
 
 .timer__progress {

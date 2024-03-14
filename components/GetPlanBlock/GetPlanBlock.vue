@@ -17,16 +17,16 @@ const onCloseModal = () => {
 </script>
 
 <template>
-  <section class="welcome">
-    <h1 class="welcome__title">
-      <span class="welcome__title--accent">Start</span> your learning journey
-      <span class="welcome__title--accent">now</span>
+  <section class="get-plan">
+    <h1 class="get-plan__title">
+      <span class="get-plan__title--accent">Start</span> your learning journey
+      <span class="get-plan__title--accent">now</span>
     </h1>
-    <h2 class="welcome__subtitle">
-      Get a <LogoText /> plan to rock <span class="block"> self-learning </span>
+    <h2 class="get-plan__subtitle">
+      Get a <LogoText /> plan to rock <span class="inline xl:block"> self-learning </span>
     </h2>
 
-    <Button @click="onShowModal"> Get my plan </Button>
+    <Button class="get-plan__button" @click="onShowModal"> Get my plan </Button>
 
     <Modal :is-visible="isVisibleModal" :on-close="onCloseModal">
       <PaymentModalContent :on-close="onCloseModal" />
@@ -35,7 +35,7 @@ const onCloseModal = () => {
 </template>
 
 <style scoped lang="scss">
-.welcome {
+.get-plan {
   max-width: 500px;
 
   .planetlearn & {
@@ -45,9 +45,13 @@ const onCloseModal = () => {
   .smartstudy & {
     color: var(--white-color);
   }
+
+  @include media(not-desktop) {
+    margin-bottom: 32px;
+  }
 }
 
-.welcome__title {
+.get-plan__title {
   margin-bottom: 24px;
 
   @include font-size(48px, 120%, 800);
@@ -55,11 +59,26 @@ const onCloseModal = () => {
   .smartstudy &--accent {
     color: var(--first-accent-color);
   }
+
+  @include media(not-desktop) {
+    margin-bottom: 16px;
+    font-size: 28px;
+  }
 }
 
-.welcome__subtitle {
+.get-plan__subtitle {
   margin-bottom: 32px;
 
   @include font-size(24px, 120%, 600);
+
+  @include media(not-desktop) {
+    font-size: 20px;
+  }
+}
+
+.get-plan__button {
+  @include media(not-desktop) {
+    min-width: 100%;
+  }
 }
 </style>

@@ -45,6 +45,8 @@ const rules = {
 const v$ = useVuelidate(rules, { form: { cardNumber, selectedMonth, selectedYear, cvc } });
 
 const onSubmitForm = () => {
+  const { $toastify } = useNuxtApp();
+  $toastify('Successful! Form data in the console.', { type: 'success' });
   console.log('Form data', {
     cardNumber: cardNumber.value,
     selectedMonth: selectedMonth.value,

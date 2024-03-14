@@ -2,6 +2,7 @@
 import IconLock from '~/components/icons/IconLock.vue';
 import IconStar from '~/components/icons/IconStar.vue';
 import DayTrialBlock from '~/components/DayTrialBlock/DayTrialBlock.vue';
+import GetPlanBlock from '~/components/GetPlanBlock/GetPlanBlock.vue';
 </script>
 
 <template>
@@ -9,42 +10,49 @@ import DayTrialBlock from '~/components/DayTrialBlock/DayTrialBlock.vue';
     <div class="info-block__box">
       <DayTrialBlock />
 
-      <ul class="info-block__list">
-        <li class="info-block__item">
-          <IconStar />
-          <p>
-            Exclusive access to <span class="info-block__item--accent">350+</span> learning programs
-          </p>
-        </li>
-        <li class="info-block__item">
-          <IconStar />
-          <p>Personalized course plan</p>
-        </li>
-        <li class="info-block__item">
-          <IconStar />
-          <p>Comfy learning schedule made by you</p>
-        </li>
-        <li class="info-block__item">
-          <IconStar />
-          <p><span class="info-block__item--accent"> 24/7</span> tutor support in a secure chat</p>
-        </li>
-        <li class="info-block__item">
-          <IconStar />
-          <p>Lifetime access to materials</p>
-        </li>
-      </ul>
+      <div class="info-block__modal">
+        <GetPlanBlock class="block xl:hidden" />
 
-      <p class="info-block__secure">
-        <IconLock />
-        Safe & secure payment
-      </p>
+        <ul class="info-block__list">
+          <li class="info-block__item">
+            <IconStar />
+            <p>
+              Exclusive access to <span class="info-block__item--accent">350+</span> learning
+              programs
+            </p>
+          </li>
+          <li class="info-block__item">
+            <IconStar />
+            <p>Personalized course plan</p>
+          </li>
+          <li class="info-block__item">
+            <IconStar />
+            <p>Comfy learning schedule made by you</p>
+          </li>
+          <li class="info-block__item">
+            <IconStar />
+            <p>
+              <span class="info-block__item--accent"> 24/7</span> tutor support in a secure chat
+            </p>
+          </li>
+          <li class="info-block__item">
+            <IconStar />
+            <p>Lifetime access to materials</p>
+          </li>
+        </ul>
 
-      <p class="info-block__disclaimer">
-        $0.99 charged today. If you don't cancel at least 24 hours before the end of the 3-day trial
-        period, you will automatically be charged the full price of $19.99/Month . You can cancel
-        your subscription at any time. By continuing, you indicate that you've read and agree to our
-        Terms & Conditions, Privacy Policy , Money Back , and Subscription Terms .
-      </p>
+        <p class="info-block__secure">
+          <IconLock />
+          Safe & secure payment
+        </p>
+
+        <p class="info-block__disclaimer">
+          $0.99 charged today. If you don't cancel at least 24 hours before the end of the 3-day
+          trial period, you will automatically be charged the full price of $19.99/Month . You can
+          cancel your subscription at any time. By continuing, you indicate that you've read and
+          agree to our Terms & Conditions, Privacy Policy , Money Back , and Subscription Terms .
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -63,6 +71,12 @@ import DayTrialBlock from '~/components/DayTrialBlock/DayTrialBlock.vue';
       top: -45px;
       z-index: 1;
       background-image: url('~/assets/ellipse_smartstudy.svg');
+    }
+
+    @include media(not-desktop) {
+      &::before {
+        display: none;
+      }
     }
   }
 }
@@ -90,6 +104,16 @@ import DayTrialBlock from '~/components/DayTrialBlock/DayTrialBlock.vue';
       top: -56px;
       background-image: url('~/assets/asteroid_planetlearn.svg');
     }
+
+    @include media(not-desktop) {
+      padding: 0 20px 24px 20px;
+      border: none;
+      background-color: transparent;
+
+      &::before {
+        display: none;
+      }
+    }
   }
 
   .smartstudy & {
@@ -107,6 +131,27 @@ import DayTrialBlock from '~/components/DayTrialBlock/DayTrialBlock.vue';
       bottom: 150px;
       z-index: -1;
       background-image: url('~/assets/rocket_smartstudy.png');
+    }
+
+    @include media(not-desktop) {
+      padding: 0 16px 30px 16px;
+      border: none;
+      backdrop-filter: unset;
+      background: none;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.info-block__modal {
+  .smartstudy & {
+    @include media(not-desktop) {
+      padding: 16px;
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.6);
     }
   }
 }
@@ -146,6 +191,13 @@ import DayTrialBlock from '~/components/DayTrialBlock/DayTrialBlock.vue';
     &:nth-child(1),
     &:nth-child(4) {
       color: var(--third-accent-color);
+    }
+
+    @include media(not-desktop) {
+      &:nth-child(1),
+      &:nth-child(4) {
+        color: inherit;
+      }
     }
   }
 }

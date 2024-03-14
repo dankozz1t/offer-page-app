@@ -3,11 +3,15 @@ import LogoLink from '~/components/LogoLink/LogoLink.vue';
 </script>
 
 <template>
-  <header class="py-5">
-    <div class="container mx-auto">
+  <header>
+    <div class="header__container container mx-auto">
       <LogoLink />
     </div>
   </header>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.header__container {
+  padding: 8px 20px;
+}
+</style>

@@ -30,6 +30,25 @@ const isTimerExpired = ref(localStorage.getItem('timeLeft') == 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include media(not-desktop) {
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 16px;
+
+    .planetlearn & {
+      border-radius: 12px;
+      border: 1px solid #cdcdcd;
+      background-color: var(--white-color);
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    .smartstudy & {
+      padding: 16px;
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
 }
 
 .trial__title {
@@ -53,6 +72,10 @@ const isTimerExpired = ref(localStorage.getItem('timeLeft') == 0);
   .smartstudy & {
     color: var(--third-accent-color);
   }
+
+  @include media(not-desktop) {
+    font-size: 16px;
+  }
 }
 
 .trial__subtitle {
@@ -61,6 +84,10 @@ const isTimerExpired = ref(localStorage.getItem('timeLeft') == 0);
 
   .smartstudy & {
     color: var(--white-color);
+  }
+
+  @include media(not-desktop) {
+    font-size: 18px;
   }
 }
 
@@ -75,6 +102,10 @@ const isTimerExpired = ref(localStorage.getItem('timeLeft') == 0);
 
   .smartstudy & {
     color: var(--white-color);
+  }
+
+  @include media(not-desktop) {
+    font-size: 14px;
   }
 }
 </style>
