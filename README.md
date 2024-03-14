@@ -1,20 +1,32 @@
 ## Offer page for an educational service with AB test logic.
 
-## I know a lot of my gaps, but[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=I'm+really+trying+to+be+better...)](https://git.io/typing-svg)
+## I know a lot of my gaps, but <br/> [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=I'm+really+trying+to+be+better...)](https://git.io/typing-svg)
 
 - To get to the <b>random design</b> page go to
-  [https://wlp-companies.netlify.app/?abtest=test](https://wlp-companies.netlify.app/?abtest=test)
+  [https://offer-page-app.netlify.app/?abtest=test](https://offer-page-app.netlify.app/?abtest=test)
 
 - To get to the <b>1 design</b> page go to
-  [https://wlp-companies.netlify.app/?abtest=var1](https://wlp-companies.netlify.app/?abtest=var1)
+  [https://offer-page-app.netlify.app/?abtest=var1](https://offer-page-app.netlify.app/?abtest=var1)
 
 - To get to the <b>2 design</b> page go to
-  [https://wlp-companies.netlify.app/?abtest=var2](https://wlp-companies.netlify.app/?abtest=var2)
+  [https://offer-page-app.netlify.app/?abtest=var2](https://offer-page-app.netlify.app/?abtest=var2)
 
 If you refresh the '/offer-page' - the timer will be saved. </br> To refresh the timer go to
-[https://wlp-companies.netlify.app/](https://wlp-companies.netlify.app/)
+[https://offer-page-app.netlify.app/](https://offer-page-app.netlify.app/)
 
 ---
+
+## Demonstration gif
+
+## ![Demonstration](https://github.com/dankozz1t/offer-page-app-app/blob/main/public/demonstration.gif)
+
+## Demonstration mockup Design 1
+
+## ![Design 1](https://github.com/dankozz1t/offer-page-app-app/blob/main/public/mockup_planetlearn.jpg)
+
+## Demonstration mockup Design 2
+
+## ![Design 2](https://github.com/dankozz1t/offer-page-app-app/blob/main/public/mockup_smartstudy.jpg)
 
 ## Setup
 
