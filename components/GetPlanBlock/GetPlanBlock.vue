@@ -58,7 +58,6 @@ const onCloseModal = () => {
   @include font-size(48px, 120%, 800);
 
   .smartstudy & {
-    @include font-size(40px, 120%, 800);
     text-transform: uppercase;
 
     &--accent {
@@ -68,6 +67,10 @@ const onCloseModal = () => {
 
   @include media(not-desktop) {
     margin-bottom: 16px;
+
+    .planetlearn & {
+      font-size: 26px;
+    }
 
     .smartstudy & {
       font-size: 28px;
