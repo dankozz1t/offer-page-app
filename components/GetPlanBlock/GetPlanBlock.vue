@@ -19,7 +19,8 @@ const onCloseModal = () => {
 <template>
   <section class="get-plan">
     <h1 class="get-plan__title">
-      <span class="get-plan__title--accent">Start</span> your learning journey
+      <span class="get-plan__title--accent">Start</span>
+      your learning journey
       <span class="get-plan__title--accent">now</span>
     </h1>
     <h2 class="get-plan__subtitle">
@@ -56,13 +57,22 @@ const onCloseModal = () => {
 
   @include font-size(48px, 120%, 800);
 
-  .smartstudy &--accent {
-    color: var(--first-accent-color);
+  .smartstudy & {
+    @include font-size(40px, 120%, 800);
+    text-transform: uppercase;
+
+    &--accent {
+      color: var(--first-accent-color);
+    }
   }
 
   @include media(not-desktop) {
     margin-bottom: 16px;
     font-size: 28px;
+
+    .smartstudy & {
+      text-transform: none;
+    }
   }
 }
 

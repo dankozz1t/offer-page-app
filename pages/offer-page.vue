@@ -28,7 +28,7 @@ document.body.classList.add(companyStore.getCompany.slug);
   justify-content: center;
 
   padding: 0 100px;
-  margin-top: 80px;
+  margin-top: 100px;
 
   @include media(not-desktop) {
     padding: 0;
