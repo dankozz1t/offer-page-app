@@ -68,9 +68,9 @@ const onCloseModal = () => {
 
   @include media(not-desktop) {
     margin-bottom: 16px;
-    font-size: 28px;
 
     .smartstudy & {
+      font-size: 28px;
       text-transform: none;
     }
   }
